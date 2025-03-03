@@ -181,6 +181,10 @@ article p {
     transform: translateY(0); /* Revient à sa place */
 }
 
+#qui-sommes-nous ul {
+   flex-direction: column;
+}
+
 .contain {
     flex-direction: row;
     justify-content: center;
@@ -235,19 +239,15 @@ article p {
     width: 40%;
 }
 
-.btn1 {
-    cursor: pointer;
-    border-radius: 10px;
-    color: #333;
-    font-family: "Roboto Condensed", serif;
-    margin-top: 20px;
-    background: #dcdcdc;
-    transition: 2s all;
+.contains {
+    opacity: 0; /* Caché au départ */
+    transform: translateY(350px); /* Décalé vers le bas */
+    transition: opacity 1s ease-out, transform 1.6s ease-out;
 }
 
-#thank.visible {
-    transform: translateX(40px);
-    transition: transform 0.3s ease-in-out;
+.contains.visible {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Revient à sa place */
 }
   
   /* Style du pied de page (footer) */
@@ -266,10 +266,12 @@ footer {
 footer p {
     padding-left: 10px;
     margin: 10px;
+    font-family: "Sigmar", serif; /* Police personnalisée pour les liens */
 }
 
 footer a {
     font-size: 10px;
+    
 }
 
 /*loader*/

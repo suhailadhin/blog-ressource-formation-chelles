@@ -153,30 +153,11 @@ if (imgCards.length > 0) {
 // Sélectionner la div avec la classe "contains"
 const container = document.querySelector('.contains');
 
-// Créer un élément bouton
-const btn1 = document.createElement('button');
+window.addEventListener("scroll", function() {
+    let position = container.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
 
-// Ajouter du texte au bouton
-btn1.textContent = 'Remerciement au formateur';
-
-// Ajouter une classe au bouton (facultatif)
-btn1.classList.add('btn1');
-
-// Ajouter le bouton à la div
-container.appendChild(btn1);
-
-btn1.addEventListener('click', function() {
-    // Vérifier si le message existe déjà pour éviter les doublons
-    if (!document.getElementById('thank')) {
-        const bord = document.createElement('p'); // Utilisation d'un élément valide
-        bord.id = 'thank';
-        bord.textContent = 'Merci à monsieur Karim';
-        bord.classList.add('visible'); // Ajouter une classe si besoin
-
-        container.appendChild(bord);
-    }
-
-    else {
-        bord.remove();
+    if (position < windowHeight - 100) { // 100px avant que ça apparaisse
+        container.classList.add("visible");
     }
 });
