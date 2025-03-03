@@ -5,7 +5,7 @@ html {
 
 /* Définition de l'apparence du body */
 body {
-    background-color: #c1c3f6; /* Couleur de fond claire */
+    background-color: #7579fa; /* Couleur de fond claire */
     margin: 0; /* Supprime la marge par défaut */
 }
 
@@ -72,7 +72,7 @@ nav li:hover {
 #toogle {
     width: 50px;
     height: 30px;
-    background-color: black;
+    background-color: #333;
     border-radius: 15px;
     position: relative;
     cursor: pointer;
@@ -282,7 +282,7 @@ footer a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #c1c3f6; /* Fond du loader */
+    background-color: #7579fa; /* Fond du loader */
     z-index: 1000;
     opacity: 90%;
     visibility: visible;
@@ -333,7 +333,7 @@ footer a {
         flex-direction: row;
         justify-content: space-between;
         position: fixed;
-        background: #c1c3f6;
+        background: #7579fa;
         z-index: 1;
         top: 0;
         height: 80px;
@@ -357,7 +357,7 @@ footer a {
    header.visible {
     display: flex;
     flex-direction: column; 
-    background-color: #c1c3f6;
+    background-color: #7579fa;
     opacity: 1;
     backdrop-filter: blur(10px);
     height: 70%;
