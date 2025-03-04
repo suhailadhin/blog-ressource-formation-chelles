@@ -231,6 +231,10 @@ article p {
     font-family:"Roboto Condensed", serif ; /* Police de style classique pour les témoignages */
 }
 
+#témoignage-des-stagiaires audio {
+    width: 50%;
+}
+
 .contains {
     margin-bottom: 80px;
    }
