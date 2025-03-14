@@ -33,6 +33,7 @@ h1, h2, h3, h4, .loader p {
     font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 25px;
 }
 
 /* Style spécifique pour les titres dans certaines sections */
@@ -51,17 +52,20 @@ ul {
 li { 
     color: #333;
     list-style-type: none; /* Supprimer les puces de la liste */
-    font-weight: 400; /* Poids de police normal */
+    font-weight: bold; /* Poids de police normal */
     font-style: normal; /* Style de police normal */
     padding: 5px; /* Espacement autour de chaque élément */
-    font-size: 12px; /* Taille de la police plus petite */
+    font-size: 25px; /* Taille de la police plus grande */
 }
 
 /* Style pour les liens (a) */
 a {
     text-decoration: none; /* Supprimer la décoration de texte (souligné) */
     color: inherit; /* Hériter la couleur du parent */
-    font-family: "Sigmar", serif; /* Police personnalisée pour les liens */
+}
+
+p {
+ font-size: 25px;
 }
 
 nav li:hover {
@@ -219,10 +223,14 @@ article p {
     transform: scale(2.5);
 }
 
+#témoignage-des-stagiaires {
+    padding-bottom: 20px;
+}
+
 /* Style pour la section Témoignages */
 #témoignage-des-stagiaires ul { 
     gap: 0px; /* Pas d'espacement entre les éléments de la liste */
-    padding: 5px; /* Espacement autour de la liste */
+    padding: 5px; /* Espacement autour de la liste */  
 }
 
 /* Style des éléments de la liste dans la section Témoignages */
@@ -232,15 +240,13 @@ article p {
 }
 
 #témoignage-des-stagiaires audio {
-    width: 50%;
     margin: 20px 0;
 }
 
 #témoignage-des-stagiaires iframe {
-    padding: 20px;
     border-radius: 30px;
-    width: 60%;
-    height: 430px;
+    width: 70%;
+    height: 330px;
 }
 
 .contains {
@@ -269,7 +275,7 @@ footer {
     position: relative;
     background-color: #dcdcdc; /* Couleur de fond du pied de page */
     width: 100%; /* Prendre toute la largeur disponible */
-    height: 280px; /* Définir la hauteur du pied de page */
+    padding: 20px 0;
     flex-shrink: 0; /* Empêcher que le pied de page soit rétréci */
     margin: 0; /* Pousser le footer vers le bas */
     border-radius: 37px 37px 0px 0px;
@@ -278,12 +284,6 @@ footer {
 footer p {
     padding-left: 10px;
     margin: 10px;
-    font-family: "Sigmar", serif; /* Police personnalisée pour les liens */
-}
-
-footer a {
-    font-size: 10px;
-    
 }
 
 /*loader*/
@@ -325,11 +325,6 @@ footer a {
 
 /* Media queries pour les écrans plus petits (moins de 768px) */
 @media screen and (max-width:768px) {
-   
-    /* Réduction de la taille des titres */
-    h1, h2, h3, h4, .loader p {
-        font-size: 15px;
-    }
 
     .fa-bars {
         visibility: visible;
@@ -392,7 +387,6 @@ main {
 }
 
    main p {
-    font-size: 12px;
     padding: 0 20px;
    }
 
@@ -406,7 +400,4 @@ main {
     align-items: center;
    }
 
-   footer p {
-    font-size: 12px;
-   }
 }
