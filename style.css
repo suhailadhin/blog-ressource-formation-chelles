@@ -236,6 +236,13 @@ article p {
     margin: 20px 0;
 }
 
+#témoignage-des-stagiaires iframe {
+    padding: 20px;
+    border-radius: 30px;
+    width: 60%;
+    height: 430px;
+}
+
 .contains {
     margin-bottom: 80px;
    }
