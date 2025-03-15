@@ -161,3 +161,14 @@ window.addEventListener("scroll", function() {
         container.classList.add("visible");
     }
 });
+
+const youtubeContainer = document.querySelector('.youtube-container');
+youtubeContainer.addEventListener('click', function() {
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/jtbJkiZ_kkI?rel=0&modestbranding=1&iv_load_policy=3";
+    iframe.title = "YouTube video player";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    youtubeContainer.innerHTML = ''; // Retirer l'image et le bouton
+    youtubeContainer.appendChild(iframe); // Ajouter l'iframe
+});
