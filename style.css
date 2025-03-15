@@ -33,7 +33,7 @@ h1, h2, h3, h4, .loader p {
     font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* Style spécifique pour les titres dans certaines sections */
@@ -62,10 +62,6 @@ li {
 a {
     text-decoration: none; /* Supprimer la décoration de texte (souligné) */
     color: inherit; /* Hériter la couleur du parent */
-}
-
-p {
- font-size: 25px;
 }
 
 nav li:hover {
@@ -111,7 +107,7 @@ nav li:hover {
   }
 
 #ressource img.visible {
-    width: 100%;
+    width: 60%;
     background: #ffffff;
 }
 
@@ -122,9 +118,11 @@ main {
 }
 
 /* Style des paragraphes dans le main */
-main p {
+main p, article p{
     padding: 0 70px; /* Espacement gauche et droite plus grand */
     font-family: "Roboto Condensed", serif; /* Police spécifique pour les paragraphes */
+    font-size: 20px;
+    text-align: justify;
 }
 
 #presentation {
@@ -146,7 +144,7 @@ figure {
 
 /* Style des images dans les figures */
 figure img {
-    width: 60%; /* Limiter la largeur des images à 60% */
+    width: 30%; /* Limiter la largeur des images à 60% */
     object-fit: contain; /* Garder l'intégrité de l'image sans déformation */
     cursor: pointer;
 }
@@ -166,11 +164,6 @@ section {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Ombre portée pour les articles */
     border-radius: 10px ;
     align-items: center; /* Centrer les éléments horizontalement */ 
-}
-/* Style des paragraphes dans les articles */
-article p {
-    font-family: "Roboto Condensed", serif; /* Police spécifique pour les paragraphes des articles */
-    padding: 10px; /* Espacement autour des paragraphes */
 }
 
 #about {
@@ -254,7 +247,7 @@ article p {
    }
 
 .contains img {
-    width: 40%;
+    width: 70%;
 }
 
 .contains {
@@ -276,13 +269,11 @@ footer {
     background-color: #dcdcdc; /* Couleur de fond du pied de page */
     width: 100%; /* Prendre toute la largeur disponible */
     padding: 20px 0;
-    flex-shrink: 0; /* Empêcher que le pied de page soit rétréci */
     margin: 0; /* Pousser le footer vers le bas */
     border-radius: 37px 37px 0px 0px;
   } 
 
 footer p {
-    padding-left: 10px;
     margin: 10px;
 }
 
@@ -376,6 +367,14 @@ footer p {
     justify-content: space-evenly;
    }
 
+   h1, h2, h3, h4, .loader p {
+    font-size: 18px;
+}
+
+figure img {
+    width: 80%;
+}
+
 #ressource img.visible {
     width: 100%;
     background: #333;
@@ -388,6 +387,7 @@ main {
 
    main p {
     padding: 0 20px;
+    font-size: 15px;
    }
 
    section {
@@ -398,6 +398,10 @@ main {
    .contain-card {
     display: flex;
     align-items: center;
+   }
+
+   footer p {
+    font-size: 15px;
    }
 
 }

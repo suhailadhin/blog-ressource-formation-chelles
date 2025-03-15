@@ -2,8 +2,8 @@ console.log('bonjour');
 
 // Attendre 3 secondes avant d'afficher le contenu
 setTimeout(() => {
-    document.querySelector(".loader").classList.add("hidden"); // Cache le loader après 3s
-}, 3000);
+    document.querySelector(".loader").classList.add("hidden"); // Cache le loader après 1s
+}, 1000);
 
 window.addEventListener('scroll', function(){
     console.log("L'utilisateur fait défiler la page !");
