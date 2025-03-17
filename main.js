@@ -135,21 +135,6 @@ toogle.addEventListener('click', function() {
     console.log('L\'état du toggle après le clic :', toogle.classList.contains('active'));
 });
 
-const containCard = document.querySelector('.contain-card');
-console.log('Vous avez cliqué sur la partie article card');
-
-const imgCards = document.querySelectorAll('.contain-card img');
-
-if (imgCards.length > 0) {
-    imgCards.forEach(img => {
-        img.addEventListener('click', function() {
-            img.classList.toggle('visible');
-        });
-    });
-} else {
-    console.error("Aucune image trouvée dans .contain-card.");
-};
-
 // Sélectionner la div avec la classe "contains"
 const container = document.querySelector('.contains');
 
@@ -162,3 +147,81 @@ window.addEventListener("scroll", function() {
     }
 });
 
+
+// carrousel 
+
+function createCarousel(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container) {
+        console.error("Carousel container not found.");
+        return;
+    }
+
+    const slides = container.querySelector(".carousel-slide");
+    const dotsContainer = container.querySelector(".carousel-dots");
+    const arrowLeft = container.querySelector(".carousel-arrow-left");
+    const arrowRight = container.querySelector(".carousel-arrow-right");
+
+    if (!slides || !dotsContainer || !arrowLeft || !arrowRight) {
+        console.error("Carousel elements not found.");
+        return;
+    }
+
+    const images = slides.querySelectorAll("img");
+    let slideIndex = 0;
+    let dots = [];
+
+    // Initialize slides
+    images.forEach((img, index) => {
+        img.style.display = index === 0 ? "block" : "none";
+    });
+
+    // Initialize dots (always 3)
+    for (let i = 0; i < 3; i++) {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (i === 0) {
+            dot.classList.add("active");
+        }
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+
+        dot.addEventListener("click", () => {
+            showSlide(i); // Use the dot index directly
+        });
+    }
+
+    // Show slide function
+    function showSlide(index) {
+        if (index < 0) {
+            slideIndex = images.length - 1;
+        } else if (index >= images.length) {
+            slideIndex = 0;
+        } else {
+            slideIndex = index;
+        }
+
+        images.forEach((img, i) => {
+            img.style.display = i === slideIndex ? "block" : "none";
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.remove("active");
+            if (i === slideIndex % 3) {
+                dot.classList.add("active");
+            }
+        });
+    }
+
+    // Arrow event listeners
+    arrowLeft.addEventListener("click", () => {
+        showSlide(slideIndex - 1);
+    });
+
+    arrowRight.addEventListener("click", () => {
+        showSlide(slideIndex + 1);
+    });
+}
+
+// Initialize the carousel
+createCarousel(".carousel-container");
