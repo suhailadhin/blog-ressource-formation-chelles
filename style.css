@@ -58,7 +58,7 @@ ul {
 li { 
     color: #333;
     list-style-type: none; /* Supprimer les puces de la liste */
-    font-weight: bold; /* Poids de police normal */
+    font-weight: 400; /* Poids de police normal */
     font-style: normal; /* Style de police normal */
     padding: 5px; /* Espacement autour de chaque élément */
     font-size: 25px; /* Taille de la police plus grande */
@@ -431,7 +431,7 @@ footer p {
     opacity: 1;
     backdrop-filter: blur(10px);
     padding-top: 20px;
-    height: 50%;
+    height: 70%;
     width: 70%;
     margin: 0%;
     border-radius: 0 0 70% 0;
